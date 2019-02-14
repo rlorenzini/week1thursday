@@ -48,9 +48,10 @@ def delete_task():
     print("Which task would you like to delete? ")
     view_all_tasks()
     key = int(input("Enter task you want to delete. "))
-    for key in tasks: #checking if entry is in dictionary
-        tasks.remove(key)
-    return tasks
+    for item in tasks: #checking if entry is in dictionary
+        if key == tasks.index(item):
+            tasks.remove(item)
+
 
 
 while user_input != "q":
